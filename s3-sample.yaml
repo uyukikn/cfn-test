@@ -1,15 +1,3 @@
-Resources:
-  S3Bucket:
-    Type: AWS::S3::Bucket
-    DeletionPolicy: Retain
-    Properties:
-      BucketName: !Sub ${AWS::AccountId}-${AWS::Region}
-      AccessControl: Private
-      PublicAccessBlockConfiguration:
-        BlockPublicAcls: True
-        BlockPublicPolicy: True
-        IgnorePublicAcls: True
-        RestrictPublicBuckets: True
-      Tags:
-        - Key: sample
-          Value: test
+template-file-path: s3-sample.yaml
+parameters: {}
+tags: {}
